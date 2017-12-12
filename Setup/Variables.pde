@@ -13,6 +13,5 @@ String title = "The water Cycle Interactive Cue Card";
 int nums = 13;
 int num[] = new int[nums];
 
-String num2 = str(num);
 
 float fontFit = width + height;

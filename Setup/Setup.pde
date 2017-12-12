@@ -6,6 +6,7 @@ void draw() {
   font = createFont ("GulimChe-48.vlw", 48);
   GUI();
   quit_Function();
+;
 }
 
 void keyPressed() {
