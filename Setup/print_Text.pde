@@ -1,4 +1,4 @@
-void printText (PFont font_local, int fontSize, int alginX, int alignY, String text, Boolean useCalc_local, int rectX, int rectY, int rectLength, int rectHeight) {
+void printText (PFont font_local, int fontSize, int alginX, int alignY, String text, Boolean useCalc_local, int rectX, int rectY, float rectLength, float rectHeight) {
   textFont(font_local, fontSize); // Type of font needed for calculation, size needed for function
   textAlign (alginX, alignY);
   fontFit = fontCalculator (text, rectLength, rectHeight);

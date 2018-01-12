@@ -1,30 +1,33 @@
+
 void GUI() {
   background(#9B9191);
   fill(0);
   textSize(20);
-  text("x: "+mouseX+" y: "+mouseY, 70, 15); // for Beta testig coordinations
+  text("x: "+mouseX+" y: "+mouseY, 70, 15); // for Beta testing coordinations
   fill(255);
   rect(width*1/5.8, height*1/8, width*2/3, height*1/12, 6);
   rect(width*1/5.8, height*1/4, width*2/3, height*1/1.4, 6);
   rect(width*1/54, height*1/8, width*2/15, height*1/2.5, 6);
   //rect(width*1/5.7, height*2/3, width*1/5, height*1/12, 6);
   
-  ellipse (width*7/8, height*1/6, height*1/12, height*1/12);
-  ellipse (width*23/24, height*1/6, height*1/12, height*1/12);
-  ellipse (width*7/8, height*1/3.6, height*1/12, height*1/12);
-  ellipse (width*23/24, height*1/3.6, height*1/12, height*1/12);
-  ellipse (width*7/8, height*1/2.6, height*1/12, height*1/12);
-  ellipse (width*23/24, height*1/2.6, height*1/12, height*1/12);
-  ellipse (width*7/8, height*1/2, height*1/12, height*1/12);
-  ellipse (width*23/24, height*1/2, height*1/12, height*1/12);
-  ellipse (width*7/8, height*1/1.64, height*1/12, height*1/12);
-  ellipse (width*23/24, height*1/1.64, height*1/12, height*1/12);
-  ellipse (width*23/24, height*1/1.4, height*1/12, height*1/12);
-  ellipse (width*7/8, height*1/1.4, height*1/12, height*1/12);
-  ellipse (width*7/8, height*1/1.21, height*1/12, height*1/12);
-  ellipse (width*23/24, height*1/1.21, height*1/12, height*1/12);
-  ellipse (width*23/24, height*1/1.07, height*1/12, height*1/12);
-  ellipse (width*7/8, height*1/1.07, height*1/12, height*1/12);
+
+  
+  ellipse (spawnX[0], height*1/6, diameter, diameter);  
+  ellipse (spawnX[1], height*1/6, diameter, diameter);
+  ellipse (spawnX[2], height*1/3.6, diameter, diameter);
+  ellipse (spawnX[3], height*1/3.6, diameter, diameter);
+  ellipse (spawnX[4], height*1/2.6, diameter, diameter);
+  ellipse (spawnX[5], height*1/2.6, diameter, diameter);
+  ellipse (spawnX[6], height*1/2, diameter, diameter);
+  ellipse (spawnX[7], height*1/2, diameter, diameter);
+  ellipse (spawnX[8], height*1/1.64, diameter, diameter);
+  ellipse (spawnX[9], height*1/1.64, diameter, diameter);
+  ellipse (spawnX[10], height*1/1.4, diameter, diameter);
+  ellipse (spawnX[11], height*1/1.4, diameter, diameter);
+  ellipse (spawnX[12], height*1/1.21, diameter, diameter);
+  ellipse (spawnX[13], height*1/1.21, diameter, diameter);
+  ellipse (spawnX[14], height*1/1.07, diameter, diameter);
+  ellipse (spawnX[15], height*1/1.07, diameter, diameter);
   
   for ( int i = 0; i<nums; i++){
     num[i] = i;

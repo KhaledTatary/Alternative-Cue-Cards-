@@ -1,9 +1,19 @@
 PFont font;
 
+
+//float x2 = width*7/8;
+
+int index;
+int[] spawnX;
+int[] spawnY;
+//int[] spawnY2;
+float diameter; 
+
 color orange = color(255,128,0);
 color blue = color(0,128,255);
 
 Boolean useCalc;
+Boolean create;
 
 String n = "\n";
 
@@ -15,3 +25,14 @@ int num[] = new int[nums];
 
 
 float fontFit = width + height;
+
+boolean move = false;
+
+void define() {
+  diameter = height*1/12;
+  index = 16;
+  spawnX = new int[index];
+  spawnY = new int[index];
+  //spawnY2 = new int[index];
+ 
+}
