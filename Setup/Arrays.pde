@@ -18,6 +18,7 @@ void arrays() {
      create[i] = false;
      createrY[i] = height*1/6 + height/9*i;
      createrY2[i] = height*1/6 + height/9*i;
+     
   }  
   
 }

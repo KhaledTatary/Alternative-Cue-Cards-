@@ -13,8 +13,33 @@ void draw() {
   quit_Function();
   
   
-  creater(0);
-  creater(2);
+  /*for (int i = 0; i<15; i++) {
+      for (int j = 0; j<7; j++) {
+         creater(i, j, createrY, spawnY);
+      }
+    
+  }
+  
+  */
+  creater(0, 0, createrY, createrY, 1);
+  creater(1, 0, createrY2, createrY2, 2);
+  
+  creater(2, 1, createrY, createrY, 3);
+  creater(3, 1, createrY2, createrY2, 4);
+  
+  
+  creater(4, 2, createrY, createrY, 5);
+  creater(5, 2, createrY2, createrY2, 6);
+  creater(6, 3, createrY, createrY, 7);
+  creater(7, 3, createrY2, createrY2, 8);
+  creater(8, 4, createrY, createrY, 9);
+  creater(9, 4, createrY2, createrY2, 10);
+  creater(10, 5, createrY, createrY, 11);
+  creater(11, 5, createrY2, createrY2, 12);
+  creater(12, 6, createrY, createrY, 13);
+  creater(13, 6, createrY2, createrY2, 14);
+  creater(14, 7, createrY, createrY, 15);
+  creater(15, 7, createrY2, createrY2, 16);
   
 /*  if (move[0] == true){
     spawnX[0] = mouseX;
@@ -30,9 +55,7 @@ void draw() {
   */
 }
 
-void keyPressed() {
-  
-}
+
 
 void mousePressed() {
   
@@ -53,5 +76,16 @@ void mousePressed() {
     move[1] = true;
     create[1] = true;
     
+  }
+  if (mouseX > spawnX[2] && mouseX < spawnX[2]+diameter && mouseY > spawnY[1] && mouseY < spawnY[1]+diameter) { //Marker #2
+    move[2] = true;
+    create[2] = true;
+    
+  }
+}
+
+void keyPressed() {
+  if(key == 'r' || keyCode == 'R'){
+
   }
 }

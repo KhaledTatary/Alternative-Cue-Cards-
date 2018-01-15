@@ -3,6 +3,7 @@ PFont font;
 //float x2 = width*7/8;
 
 int index;
+//int[] indexCreater;
 int[] spawnX;
 int[] spawnY;
 int[] spawnY2;
@@ -10,6 +11,8 @@ int[] createrX;
 int[] createrY;
 int[] createrY2;
 float diameter; 
+int a;
+
 
 color orange = color(255,128,0);
 color blue = color(0,128,255);
@@ -27,7 +30,7 @@ String instructions = "Drag the numbers " + n + "on to the appropriate" + n + "p
 String title = "The water Cycle Interactive Cue Card";
 
 int nums = 17;
-int num[] = new int[nums];
+int numArray[] = new int[nums];
 
 
 float fontFit = width + height;
@@ -45,4 +48,6 @@ void defines() {
   createrX = new int[index];
   createrY = new int[index];
   createrY2 = new int[index];
+  //indexCreater = new int[index];
+  
 }
