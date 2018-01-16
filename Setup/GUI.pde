@@ -1,40 +1,60 @@
 // 1080*1/6 +120(i)
 void GUI() {
   background(#9B9191);
-  fill(0);
-  textSize(20);
-  text("x: "+mouseX+" y: "+mouseY, 70, 15); // for Beta testing coordinations
+  fill(110,110,255);
+  rect(width*1/5.8, height*0, width*2/3, height*1/12, 6); //Title
   fill(255);
-  rect(width*1/5.8, height*1/8, width*2/3, height*1/12, 6);
-  rect(width*1/5.8, height*1/4, width*2/3, height*1/1.4, 6);
-  rect(width*1/54, height*1/8, width*2/15, height*1/2.5, 6);
+  rect(width*1/5.8, height*1/9, width*2/3, height*1/1.4, 6); // picture
+  fill(110,110,255);
+  rect(width*1/54, height*0, width*2/15, height*1/2.5, 6); // Instructions
   //rect(width*1/5.7, height*2/3, width*1/5, height*1/12, 6);
   
-
+  rect(width*1/54, height*1/2.46, width*2/15, height*1/10, 6); //Timer block
   
-  ellipse (spawnX[0], spawnY[0], diameter, diameter);  
-  ellipse (spawnX[1], spawnY2[0], diameter, diameter);
-  ellipse (spawnX[2], spawnY[1], diameter, diameter);
-  ellipse (spawnX[3], spawnY2[1], diameter, diameter);
-  ellipse (spawnX[4], spawnY[2], diameter, diameter);
-  ellipse (spawnX[5], spawnY2[2], diameter, diameter);
-  ellipse (spawnX[6], spawnY[3], diameter, diameter);
-  ellipse (spawnX[7], spawnY2[3], diameter, diameter);
-  ellipse (spawnX[8], spawnY[4], diameter, diameter);
-  ellipse (spawnX[9], spawnY2[4], diameter, diameter);
-  ellipse (spawnX[10], spawnY[5], diameter, diameter);
-  ellipse (spawnX[11], spawnY2[5], diameter, diameter);
-  ellipse (spawnX[12], spawnY[6], diameter, diameter);
-  ellipse (spawnX[13], spawnY2[6], diameter, diameter);
-  ellipse (spawnX[14], spawnY[7], diameter, diameter);
-  ellipse (spawnX[15], spawnY2[7], diameter, diameter);
+  image(images, width*1/5.7, height*1/8.76, width*2/3.02, height*1/1.41);
+  
+  fill(0);
+  textSize(20);
+  text("x: "+mouseX+" y: "+mouseY, 160, 120); // for Beta testing coordinations
+  fill(255);
+  
+  coloring(0, 0, spawnY, 255,100,100);
+  coloring(1, 0, spawnY2, 70,70,255);
+  coloring(2, 1, spawnY, 70,200,200);
+  coloring(3, 1, spawnY2, 200,200,200);
+  coloring(4, 2, spawnY, 200,70,200);
+  coloring(5, 2, spawnY2, 200,100,100);
+  coloring(6, 3, spawnY, 30,230,200);
+  coloring(7, 3, spawnY2, 140,160,100);
+  coloring(8, 4, spawnY, 225,0,128);
+  coloring(9, 4, spawnY2, 225,128,0);
+  coloring(10, 5, spawnY, 225,128,160);
+  coloring(11, 5, spawnY2, 30,98,47);
+  coloring(12, 6, spawnY, 255,0,226);
+  coloring(13, 6, spawnY2, 246,255,0);
+  coloring(14, 7, spawnY, 42,103,0);
+  coloring(15, 7, spawnY2, 103,0,93);
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   for ( int i = 0; i<nums; i++){
     numArray[i] = i;
   }
     
-  printText(font, 23, CENTER, TOP, instructions, useCalc = true, width*1/54, height*1/8, width*2/15, height*1/2);
-  printText(font, 23, CENTER, TOP, title, useCalc = true, width*1/6, height*1/8, width*2/3, height*1/12);
+  printText(font, 23, CENTER, TOP, instructions, useCalc = true, width*1/54, height*0, width*2/15, height*1/2);
+  printText(font, 23, CENTER, TOP, title, useCalc = true, width*1/6, height*0, width*2/3, height*1/12);
+  printText(font, 1, CENTER, TOP, timer, useCalc = true, width*1/54, height*3/7, width*2/15, height*1/6);
   
   //Numbers for the ellipses
   printText(font, 10, CENTER, TOP, str(numArray[1]), useCalc = false,   spawnX[0], spawnY[0] - height*1/18, diameter, diameter);
