@@ -9,39 +9,33 @@ void setup() {
 
 
 void draw() {
+  
+  
   font = createFont ("GulimChe-48.vlw", 48);
- 
-  //int time; 
 
-  if (millis() - time >= 1) { 
-      timers = timers - 1;
-      if(timers == 0){
-        timers2 = timers2 - 1;
-        timers = 60;
-      }
+  if(checkTime == true){
+    if (millis() - time >= 1) { 
+        timers = timers - 1;
+        time = millis();
+        if(timers == 0){
+          timers2 = timers2 - 1;
+          timers = 60;
+        }
+        if(timers2 == 0 && timers == 1){
+          checkTime = false;
+        }
+    }
   }
   
   timer = "Time:" + timers2 + ":" + timers;
-  
+ if(checkTime == true){ 
   GUI();
   quit_Function();
-  
 
-  /*for (int i = 0; i<15; i++) {
-      for (int j = 0; j<7; j++) {
-         creater(i, j, createrY, spawnY);
-      }
-    
-  }
-  
-  */
   creater(0, 0, createrY, createrY, 1, 255,100,100);
   creater(1, 0, createrY2, createrY2, 2, 70,70,255);
-  
   creater(2, 1, createrY, createrY, 3, 70,200,200);
   creater(3, 1, createrY2, createrY2, 4, 200,200,200);
-  
-  
   creater(4, 2, createrY, createrY, 5, 200,70,200);
   creater(5, 2, createrY2, createrY2, 6, 200,100,100);
   creater(6, 3, createrY, createrY, 7, 30,230,200);
@@ -54,19 +48,19 @@ void draw() {
   creater(13, 6, createrY2, createrY2, 14, 246,255,0);
   creater(14, 7, createrY, createrY, 15, 42,103,0);
   creater(15, 7, createrY2, createrY2, 16, 103,0,93);
+ }
+ else if(checkTime == false){
+    rect(width*0, height*0, width*1/2, height*1/2);
+    printText(font, 23, CENTER, TOP, gameOver, useCalc = true, width*0, height*0, width*1/2, height*1/2);
+    if(keyPressed){
+      if(key == 'r' || key == 'R'){
+        checkTime = true;
+        timers2 = 1;
+        timers = 60;
+      }
+    }
+ }
   
-/*  if (move[0] == true){
-    spawnX[0] = mouseX;
-    spawnY[0] = mouseY;
-  }
- 
-  
-  
-  if (move[1] == true){
-    spawnX[1] = mouseX;
-    spawnY2[0] = mouseY;
-  }
-  */
 }
 
 
@@ -80,7 +74,6 @@ void mousePressed() {
   if (mouseX > width*7/8 && mouseX < width && mouseY > height*0 && mouseY < height*1/12) {
       exit();
   }
-   
   ifStatments(0, 0, spawnY);
   ifStatments(1, 0, spawnY2);
   ifStatments(2, 1, spawnY);
@@ -97,7 +90,7 @@ void mousePressed() {
   ifStatments(13, 6, spawnY2);
   ifStatments(14, 7, spawnY);
   ifStatments(15, 7, spawnY2);
-
+  
 }
 
 void keyPressed() {

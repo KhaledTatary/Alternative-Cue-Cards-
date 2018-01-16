@@ -1,10 +1,9 @@
 PFont font;
 PImage images;
 
-//float x2 = width*7/8;
-
 int index;
-//int[] indexCreater;
+int index2;
+
 int[] spawnX;
 int[] spawnY;
 int[] spawnY2;
@@ -32,6 +31,7 @@ String text1;
 
 String instructions = "Drag the numbers " + n + "on to the appropriate" + n + "place on the diagram" + n + n + "NOTE:" + n + "You may use each" + n + "number more than" + n + "once or not at all";
 String title = "The water Cycle Interactive Cue Card";
+String gameOver = "The Timer is finished: GameOver " + n + "press R to restart again";
 String timer;
 
 
@@ -53,6 +53,7 @@ float fontFit = width + height;
 void defines() {
   diameter = height*1/12;
   index = 16;
+  index2 = 8;
   spawnX = new int[index];
   spawnY = new int[index];
   spawnY2 = new int[index];
@@ -61,7 +62,6 @@ void defines() {
   createrX = new int[index];
   createrY = new int[index];
   createrY2 = new int[index];
-  //indexCreater = new int[index];
   images = loadImage("waterCycle.jpg");
   text1 = "";
   timers = 60;

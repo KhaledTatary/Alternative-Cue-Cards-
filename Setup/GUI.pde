@@ -11,6 +11,11 @@ void GUI() {
   
   rect(width*1/54, height*1/2.46, width*2/15, height*1/10, 6); //Timer block
   
+  rect(width*1/54, height*1/1.96, width*2/15, height*1/12, 6); //grade
+  
+  
+  
+  
   image(images, width*1/5.7, height*1/8.76, width*2/3.02, height*1/1.41);
   
   fill(0);
