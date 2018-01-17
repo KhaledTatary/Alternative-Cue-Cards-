@@ -3,6 +3,7 @@ void setup() {
   frameRate(60);
   defines();
   arrays();
+
   //println(spawnX);
   //println(spawnY);
 }
@@ -13,13 +14,13 @@ void draw() {
   
   font = createFont ("GulimChe-48.vlw", 48);
 
-  if(checkTime == true){
+  if(checkTime == true){ // the Timer
     if (millis() - time >= 1) { 
         timers = timers - 1;
         time = millis();
         if(timers == 0){
           timers2 = timers2 - 1;
-          timers = 60;
+          timers = 59;
         }
         if(timers2 == 0 && timers == 1){
           checkTime = false;
@@ -28,7 +29,8 @@ void draw() {
   }
   
   timer = "Time:" + timers2 + ":" + timers;
- if(checkTime == true){ 
+  
+ if(checkTime == true){
   GUI();
   quit_Function();
 
@@ -50,15 +52,8 @@ void draw() {
   creater(15, 7, createrY2, createrY2, 16, 103,0,93);
  }
  else if(checkTime == false){
-    rect(width*0, height*0, width*1/2, height*1/2);
-    printText(font, 23, CENTER, TOP, gameOver, useCalc = true, width*0, height*0, width*1/2, height*1/2);
-    if(keyPressed){
-      if(key == 'r' || key == 'R'){
-        checkTime = true;
-        timers2 = 1;
-        timers = 60;
-      }
-    }
+    rect(width*0, height*0, width, height);
+    printText(font, 23, CENTER, TOP, gameOver, useCalc = true, width*0, height*0, width, height);
  }
   
 }
@@ -74,29 +69,29 @@ void mousePressed() {
   if (mouseX > width*7/8 && mouseX < width && mouseY > height*0 && mouseY < height*1/12) {
       exit();
   }
-  ifStatments(0, 0, spawnY);
-  ifStatments(1, 0, spawnY2);
-  ifStatments(2, 1, spawnY);
-  ifStatments(3, 1, spawnY2);
-  ifStatments(4, 2, spawnY);
-  ifStatments(5, 2, spawnY2);
-  ifStatments(6, 3, spawnY);
-  ifStatments(7, 3, spawnY2);
-  ifStatments(8, 4, spawnY);
-  ifStatments(9, 4, spawnY2);
-  ifStatments(10, 5, spawnY);
-  ifStatments(11, 5, spawnY2);
-  ifStatments(12, 6, spawnY);
-  ifStatments(13, 6, spawnY2);
-  ifStatments(14, 7, spawnY);
-  ifStatments(15, 7, spawnY2);
   
+  ifStatments(0, 0, spawnRectY);
+  ifStatments(1, 0, spawnRectY2);
+  ifStatments(2, 1, spawnRectY);
+  ifStatments(3, 1, spawnRectY2);
+  ifStatments(4, 2, spawnRectY);
+  ifStatments(5, 2, spawnRectY2);
+  ifStatments(6, 3, spawnRectY);
+  ifStatments(7, 3, spawnRectY2);
+  ifStatments(8, 4, spawnRectY);
+  ifStatments(9, 4, spawnRectY2);
+  ifStatments(10, 5, spawnRectY);
+  ifStatments(11, 5, spawnRectY2);
+  ifStatments(12, 6, spawnRectY);
+  ifStatments(13, 6, spawnRectY2);
+  ifStatments(14, 7, spawnRectY);
+  ifStatments(15, 7, spawnRectY2);
+ 
 }
 
 void keyPressed() {
-  //if(key == 'r' || keyCode == 'R'){
-
-  //}
-  text1+=key;
-  println (text1);
+  if(key == 'r' || key == 'R'){
+        checkTime = true;
+        setup();
+    }
 }

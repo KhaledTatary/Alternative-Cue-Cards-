@@ -1,0 +1,5 @@
+-saving scoreboard to a txt file (or json file)
+-adding answer boxes
+-adding defintions 
+-(maybe) adding a way to make someone to create their own definition and svaing it to txt file
+-adding music

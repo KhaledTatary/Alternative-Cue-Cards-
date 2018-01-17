@@ -10,20 +10,16 @@ void GUI() {
   //rect(width*1/5.7, height*2/3, width*1/5, height*1/12, 6);
   
   rect(width*1/54, height*1/2.46, width*2/15, height*1/10, 6); //Timer block
-  
   rect(width*1/54, height*1/1.96, width*2/15, height*1/12, 6); //grade
   
-  
-  
-  
-  image(images, width*1/5.7, height*1/8.76, width*2/3.02, height*1/1.41);
+  image(images, width*1/5.7, height*1/8.76, width*2/3.02, height*1/1.41); // the Image
   
   fill(0);
   textSize(20);
   text("x: "+mouseX+" y: "+mouseY, 160, 120); // for Beta testing coordinations
   fill(255);
   
-  coloring(0, 0, spawnY, 255,100,100);
+  coloring(0, 0, spawnY, 255,100,100); 
   coloring(1, 0, spawnY2, 70,70,255);
   coloring(2, 1, spawnY, 70,200,200);
   coloring(3, 1, spawnY2, 200,200,200);

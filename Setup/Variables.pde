@@ -3,6 +3,8 @@ PImage images;
 
 int index;
 int index2;
+int boxAreaX;
+int boxAreaY;
 
 int[] spawnX;
 int[] spawnY;
@@ -10,9 +12,11 @@ int[] spawnY2;
 int[] createrX;
 int[] createrY;
 int[] createrY2;
+int[] spawnRectX;
+int[] spawnRectY;
+int[] spawnRectY2;
 float diameter; 
 int a;
-//int time;
 int time2;
 
 
@@ -52,6 +56,8 @@ float fontFit = width + height;
 
 void defines() {
   diameter = height*1/12;
+  boxAreaX = width*2/42;
+  boxAreaY = height*1/12;
   index = 16;
   index2 = 8;
   spawnX = new int[index];
@@ -62,6 +68,9 @@ void defines() {
   createrX = new int[index];
   createrY = new int[index];
   createrY2 = new int[index];
+  spawnRectX = new int[index];
+  spawnRectY = new int[index];
+  spawnRectY2 = new int[index];
   images = loadImage("waterCycle.jpg");
   text1 = "";
   timers = 60;

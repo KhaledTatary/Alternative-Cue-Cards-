@@ -12,4 +12,4 @@ float fontCalculator (String text, float rectLength, float textHeight) {
   return textHeight_local;
 }
 
-//Credit for Mark, Mercer for the font resizer
+//Credit for Mark Mercer for the font resizer
