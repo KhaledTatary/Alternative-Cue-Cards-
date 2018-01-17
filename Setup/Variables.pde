@@ -1,3 +1,12 @@
+//TextBox tbox;
+
+final int stateNormal = 0;
+final int stateInputBox = 1;
+int state=stateNormal;
+String result = "/";
+
+
+
 PFont font;
 PImage images;
 

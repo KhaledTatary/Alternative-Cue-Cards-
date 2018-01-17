@@ -12,7 +12,20 @@ void GUI() {
   rect(width*1/54, height*1/2.46, width*2/15, height*1/10, 6); //Timer block
   rect(width*1/54, height*1/1.96, width*2/15, height*1/12, 6); //grade
   
+  
+  
   image(images, width*1/5.7, height*1/8.76, width*2/3.02, height*1/1.41); // the Image
+  noFill();
+  strokeWeight(4);
+  rect(width*1/4.5, height*1/5, width*2/30, height*1/11); // box #1
+  rect(width*1/4.5, height*1/2.03, width*2/30, height*1/11); // box #2
+  rect(width*1/5.4, height*1/2.8, width*2/30, height*1/11); // box #3
+  rect(width*1/2.6, height*1/2.55, width*2/30, height*1/11); // box #4
+  rect(width*1/1.9, height*1/2.6, width*2/30, height*1/11); // box #5
+  rect(width*1/1.5, height*1/2.7, width*2/30, height*1/11); // box #6
+  rect(width*1/1.33, height*1/2.6, width*2/30, height*1/11); // box #7
+  
+  strokeWeight(2);
   
   fill(0);
   textSize(20);

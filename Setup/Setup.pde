@@ -1,9 +1,12 @@
 void setup() {
   fullScreen();
   frameRate(60);
+  rectMode(CORNER);
   defines();
   arrays();
-
+  //instantBox();
+  //tbox.isFocused = true;
+  
   //println(spawnX);
   //println(spawnY);
 }
@@ -15,7 +18,7 @@ void draw() {
   font = createFont ("GulimChe-48.vlw", 48);
 
   if(checkTime == true){ // the Timer
-    if (millis() - time >= 1) { 
+    if (millis() - time >= 10000) { 
         timers = timers - 1;
         time = millis();
         if(timers == 0){
@@ -30,6 +33,14 @@ void draw() {
   
   timer = "Time:" + timers2 + ":" + timers;
   
+  /*if(state==stateNormal) {
+    opacity();
+  }
+  else if(state ==stateInputBox){
+    opacity();
+    tbox.display();
+  }
+  */
  if(checkTime == true){
   GUI();
   quit_Function();
