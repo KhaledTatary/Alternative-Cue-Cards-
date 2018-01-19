@@ -1,11 +1,8 @@
-//TextBox tbox;
 
-final int stateNormal = 0;
-final int stateInputBox = 1;
-int state=stateNormal;
-String result = "/";
+import controlP5.*;
 
-
+ControlP5 cp5;
+String textValue = "";
 
 PFont font;
 PImage images;
@@ -85,4 +82,22 @@ void defines() {
   timers = 60;
   timers2 = 1;
   checkTime = true;
+}
+
+void fields() {
+  PFont font2 = createFont("arial",20);
+  
+  cp5 = new ControlP5(this);
+  
+  cp5.addTextfield("Your name")
+     .setPosition(60,565)
+     .setSize(200,40)
+     .setFont(createFont("arial",20))
+     .setAutoClear(false)
+     ;
+  
+     
+  textFont(font2);
+
+
 }

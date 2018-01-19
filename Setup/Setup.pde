@@ -1,15 +1,32 @@
+
+
 void setup() {
   fullScreen();
   frameRate(60);
   rectMode(CORNER);
   defines();
   arrays();
-  //instantBox();
-  //tbox.isFocused = true;
+  fields();
   
   //println(spawnX);
   //println(spawnY);
 }
+void controlEvent(ControlEvent theEvent) {
+  if(theEvent.isAssignableFrom(Textfield.class)) {
+    println("controlEvent: accessing a string from controller '"
+            +theEvent.getName()+"': "
+            +theEvent.getStringValue()
+            
+            );
+  }
+}
+
+
+public void input(String theText) {
+  // automatically receives results from controller input
+  println("a textfield event for controller 'input' : "+theText);
+}
+
 
 
 void draw() {
@@ -32,15 +49,7 @@ void draw() {
   }
   
   timer = "Time:" + timers2 + ":" + timers;
-  
-  /*if(state==stateNormal) {
-    opacity();
-  }
-  else if(state ==stateInputBox){
-    opacity();
-    tbox.display();
-  }
-  */
+
  if(checkTime == true){
   GUI();
   quit_Function();
@@ -68,8 +77,6 @@ void draw() {
  }
   
 }
-
-
 
 void mousePressed() {
   
@@ -101,8 +108,16 @@ void mousePressed() {
 }
 
 void keyPressed() {
-  if(key == 'r' || key == 'R'){
-        checkTime = true;
-        setup();
-    }
+  if (key=='1') {
+    cp5.saveProperties(("yourname.properties"));
+  } 
+  else if (key=='2') {
+    cp5.loadProperties(("yourname.properties"));
+  }
+  if(checkTime == false){
+    if(key == 'r' || key == 'R'){
+          checkTime = true;
+          setup();
+      }
+  }
 }
