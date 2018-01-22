@@ -1,5 +1,5 @@
--saving scoreboard to a txt file (or json file)
+-saving scoreboard to a txt file (or json file) DONE
 -adding answer boxes
--adding defintions 
+-adding defintions DONE
 -(maybe) adding a way to make someone to create their own definition and svaing it to txt file
 -adding music

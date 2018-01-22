@@ -10,26 +10,31 @@ void GUI() {
   //rect(width*1/5.7, height*2/3, width*1/5, height*1/12, 6);
   
   rect(width*1/54, height*1/2.46, width*2/15, height*1/10, 6); //Timer block
-  rect(width*1/54, height*1/1.96, width*2/15, height*1/12, 6); //grade
+  rect(width*1/54, height*1/1.96, width*2/15, height*1/12, 6); //Name
+  rect(width*1/54, height*1/1.67, width*2/15, height*1/12, 6); //Grade
+  rect(width*1/400, height*6/7.1, width*1/1.23, height*2/13.3, 6);
+  rect(width*1/400, height*6/8.6, width*2/15, height*1/7, 6); 
   
   
   
   image(images, width*1/5.7, height*1/8.76, width*2/3.02, height*1/1.41); // the Image
   noFill();
   strokeWeight(4);
-  rect(width*1/4.5, height*1/5, width*2/30, height*1/11); // box #1
-  rect(width*1/4.5, height*1/2.03, width*2/30, height*1/11); // box #2
-  rect(width*1/5.4, height*1/2.8, width*2/30, height*1/11); // box #3
-  rect(width*1/2.6, height*1/2.55, width*2/30, height*1/11); // box #4
-  rect(width*1/1.9, height*1/2.6, width*2/30, height*1/11); // box #5
-  rect(width*1/1.5, height*1/2.7, width*2/30, height*1/11); // box #6
-  rect(width*1/1.33, height*1/2.6, width*2/30, height*1/11); // box #7
+  rect(width*1/4.5, height*1/5, answerAreaX, answerAreaY); // box #1
+  rect(width*1/5.4, height*1/2.8, answerAreaX, answerAreaY); // box #2
+  rect(width*1/4.5, height*1/2.03, answerAreaX, answerAreaY); // box #3
+  rect(width*1/2.6, height*1/2.55, answerAreaX, answerAreaY); // box #4
+  rect(width*1/1.9, height*1/2.6, answerAreaX, answerAreaY); // box #5
+  rect(width*1/1.83, height*1/2.1, answerAreaX, answerAreaY); // box #6
+  rect(width*1/1.5, height*1/2.7, answerAreaX, answerAreaY); // box #13
   
   strokeWeight(2);
   
   fill(0);
   textSize(20);
   text("x: "+mouseX+" y: "+mouseY, 160, 120); // for Beta testing coordinations
+  textSize(38);
+  text(grade, width*1/12, height*1/1.62);
   fill(255);
   
   coloring(0, 0, spawnY, 255,100,100); 
@@ -69,6 +74,7 @@ void GUI() {
   printText(font, 23, CENTER, TOP, instructions, useCalc = true, width*1/54, height*0, width*2/15, height*1/2);
   printText(font, 23, CENTER, TOP, title, useCalc = true, width*1/6, height*0, width*2/3, height*1/12);
   printText(font, 1, CENTER, TOP, timer, useCalc = true, width*1/54, height*3/7, width*2/15, height*1/6);
+  
   
   //Numbers for the ellipses
   printText(font, 10, CENTER, TOP, str(numArray[1]), useCalc = false,   spawnX[0], spawnY[0] - height*1/18, diameter, diameter);

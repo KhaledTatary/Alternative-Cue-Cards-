@@ -18,6 +18,8 @@ void arrays() {
      spawnY2[i] = height*1/6 + height/9*i;
      move[i] = false;
      create[i] = false;
+     correct[i] = false;
+     stop[i] = false;
      createrY[i] = height*1/6 + height/9*i;
      createrY2[i] = height*1/6 + height/9*i;
      
