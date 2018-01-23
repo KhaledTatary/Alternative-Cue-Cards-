@@ -1,4 +1,4 @@
-
+import processing.sound.*;
 import controlP5.*;
 
 ControlP5 cp5;
@@ -28,6 +28,8 @@ int a;
 int time2;
 int gradeAmount;
 
+int totalEffects = 1;
+SoundFile[] effect = new SoundFile[totalEffects];
 
 color orange = color(255,128,0);
 color blue = color(0,128,255);
@@ -47,15 +49,18 @@ String text1;
 String instructions = "Drag the numbers " + n + "on to the appropriate" + n + "place on the diagram" + n + n + "NOTE:" + n + "You may use each" + n + "number more than" + n + "once or not at all" + n + "press 1 to save" + n + "and 2 to load" ;
 String title = "The water Cycle Interactive Cue Card";
 String gameOver = "The Timer is finished: GameOver " + n + "press R to restart again";
+String total;
 String timer;
 String grade;
 String quit;
+String names;
 
 
 
 int time;
 int timers;
 int timers2;
+int time10;
 
 
 
@@ -66,6 +71,7 @@ int numArray[] = new int[nums];
 float fontFit = width + height;
 
 JSONObject json;
+JSONObject json2;
 
 void defines() {
   diameter = height*1/12;
@@ -94,9 +100,17 @@ void defines() {
   timers2 = 1;
   gradeAmount = 0;
   quit = "Quit";
-  
+  json = loadJSONObject("grade.json");
+  int grades = json.getInt("Grade:");
+  json2 = loadJSONObject("properties.json");
+  JSONObject json3 = json2.getJSONObject("/Your name");
+  String name = json3.getString("text");
+  total = "Your Grade was: " + grades + " out of 16";
+  names = "Your name is: " + name;
   checkTime = true;
   json = new JSONObject();
+  
+  effect[0] = new SoundFile(this, "correct.mp3");
 }
 
 void fields() { //for the text fields

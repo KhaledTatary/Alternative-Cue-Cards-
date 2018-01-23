@@ -26,7 +26,16 @@ void GUI() {
   rect(width*1/2.6, height*1/2.55, answerAreaX, answerAreaY); // box #4
   rect(width*1/1.9, height*1/2.6, answerAreaX, answerAreaY); // box #5
   rect(width*1/1.83, height*1/2.1, answerAreaX, answerAreaY); // box #6
+  rect(width*1/2.07, height*1/1.82, answerAreaX, answerAreaY); //box #7
+  rect(width*1/1.7, height*1/1.4, answerAreaX, answerAreaY); //box #8
+  rect(width*1/2.33, height*1/1.37, answerAreaX, answerAreaY); //box #9
+  rect(width*1/1.3, height*1/1.47, answerAreaX, answerAreaY); //box #10
+  rect(width*1/1.43, height*1/1.4, answerAreaX, answerAreaY); //box #11
+  rect(width*1/1.35, height*1/1.74, answerAreaX, answerAreaY); //box #12
   rect(width*1/1.5, height*1/2.7, answerAreaX, answerAreaY); // box #13
+  rect(width*1/1.61, height*1/6.8, answerAreaX, answerAreaY); // box #14
+  rect(width*1/1.67, height*1/3.9, answerAreaX, answerAreaY); // box #15
+  rect(width*1/1.56, height*1/1.85, answerAreaX, answerAreaY); // box #16
   
   strokeWeight(2);
   

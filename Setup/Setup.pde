@@ -7,6 +7,9 @@ void setup() {
   defines();
   arrays();
   fields();
+
+
+
   //println(spawnX);
   //println(spawnY);
 }
@@ -33,17 +36,14 @@ void draw() {
   saveJSONObject(json, "data/grade.json");
 
   font = createFont ("GulimChe-48.vlw", 48);
-  grading(0, 0);
-  grading(1, 1);
-  grading(2, 2);
-  grading(3, 3);
-  grading(4, 4);
-  grading(5, 5);
+  for(int i=0; i<16; i++){
+    grading(i, i);
+  }
 
   grade = "Grade:" + gradeAmount + "/16";
 
   if (checkTime == true) { // the Timer
-    if (millis() - time >= 10000) { 
+    if (millis() - time >= 1000) { 
       timers = timers - 1;
       time = millis();
       if (timers == 0) {
@@ -81,7 +81,9 @@ void draw() {
     creater(15, 7, createrY2, createrY2, 16, 103, 0, 93);
   } else if (checkTime == false) {
     rect(width*0, height*0, width, height);
-    printText(font, 23, CENTER, TOP, gameOver, useCalc = true, width*0, height*0, width, height);
+    
+    printText(font, 23, CENTER, TOP, gameOver + n + total + n + names + n + "Your current grade is: " + gradeAmount, useCalc = true, width*0, height*0, width, height);
+    //text(gradeAmount, 500,500);
   }
 }
 
@@ -113,12 +115,22 @@ void mousePressed() {
   ifStatments(14, 7, spawnRectY);
   ifStatments(15, 7, spawnRectY2);
 
-  ifStatments2(0, width*1/4.5, height*1/5, 0, createrY);
-  ifStatments2(1, width*1/5.4, height*1/2.8, 0, createrY2);
-  ifStatments2(2, width*1/4.5, height*1/2.03, 1, createrY);
-  ifStatments2(3, width*1/2.6, height*1/2.55, 1, createrY2);
-  ifStatments2(4, width*1/1.9, height*1/2.6, 2, createrY);
-  ifStatments2(5, width*1/1.83, height*1/2.1, 2, createrY2);
+  ifStatments2(0, width*1/4.5, height*1/5, 0, createrY); // box #1
+  ifStatments2(1, width*1/5.4, height*1/2.8, 0, createrY2); // box #2
+  ifStatments2(2, width*1/4.5, height*1/2.03, 1, createrY); // box #3
+  ifStatments2(3, width*1/2.6, height*1/2.55, 1, createrY2); // box #4
+  ifStatments2(4, width*1/1.9, height*1/2.6, 2, createrY); // box #5
+  ifStatments2(5, width*1/1.83, height*1/2.1, 2, createrY2); // box #6
+  ifStatments2(6, width*1/2.07, height*1/1.82, 3, createrY); // box #7
+  ifStatments2(7, width*1/1.7, height*1/1.4, 3, createrY2); // box #8
+  ifStatments2(8, width*1/2.33, height*1/1.37, 4, createrY); // box #9
+  ifStatments2(9, width*1/1.3, height*1/1.47, 4, createrY2); // box #10
+  ifStatments2(10, width*1/1.43, height*1/1.4, 5, createrY); // box #11
+  ifStatments2(11, width*1/1.35, height*1/1.74, 5, createrY2); // box #12
+  ifStatments2(12, width*1/1.5, height*1/2.7, 6, createrY); // box #13
+  ifStatments2(13, width*1/1.61, height*1/6.8, 6, createrY2); // box #14
+  ifStatments2(14, width*1/1.67, height*1/3.9, 7, createrY); // box #15
+  ifStatments2(15, width*1/1.56, height*1/1.85, 7, createrY2); // box #16
 }
 
 void keyPressed() {

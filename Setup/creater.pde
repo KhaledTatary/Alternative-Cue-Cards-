@@ -2,7 +2,8 @@ void creater(int num, int num2, int[] createrPlace, int[] createrPlace2, int lis
   if(create[num] == true){ //Marker #1
   fill(color1, color2, color3);
     if(correct[num] == true){
-      fill(0,255,0);
+      fill(0,255,0);      
+      
    }
   ellipse(createrX[num], createrPlace[num2], diameter, diameter);
   fill(255);
